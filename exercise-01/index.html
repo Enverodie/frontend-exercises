@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <script>
+            /* 
+            This is an example of how you can write an inline script. Generally speaking, inline scripts should be included at the BOTTOM of the BODY, rather than in the head element. You *can* do either, however.
+
+            Here is a resource on why you should consider putting your script tags at the bottom of the body rather than up here:
+            https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup
+            But in summary:
+                The page is processed HTML line by line. Ideally, you want the page to load before the scripts get processed, because the user is going to see the page before they see anything that might modify/interact with it (i.e. JavaScript).
+            */
+            // also, within SCRIPT tags such as these, you cannot write HTML as usual - script tags are read as JavaScript, just as <style> tags are read as CSS.
+        </script>
+
+        <style>
+            body {
+                background-color: inherit;
+                /* see what I mean? You wouldn't write HTML or JS in this fashion. */
+            }
+        </style>
+
+        <!-- You can also include external JavaScript as follows: -->
+        <script src="sample1.js"></script>
+        <!-- ...where nothing goes in between the script tags -->
+        <!-- 
+            Notice that inside the sample1.js file I have told the script to load a box that says "Appended from JS at the TOP of the document."
+            It has not done this. Do you know why? It's because the JS is being interpreted BEFORE the document exists, and thus the variable "b" (the document) is null when the script is read!
+        -->
+
+    </head>
+    <body>
+
+        <h1>This is an example page to demonstrate JavaScript load order + things to keep in mind.</h1>
+
+        <!-- We can fix an earlier problem by having a script load at the end of a document in the same way as before. This time we'll load sample2.js, which just changes the inner text to show that indeed, the second script is the one being rendered on the page. -->
+        <script src="sample2.js"></script>
+    </body>
+</html>

@@ -1,0 +1,1 @@
+# Exercise 1 attempts to demonstrate how HTML is loaded, interpreted, and things to consider when loading JavaScript files.
