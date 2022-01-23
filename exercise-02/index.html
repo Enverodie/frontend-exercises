@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Event listeners</title>
+        <style>
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                margin: 0;
+                min-height: 100vh;
+            }
+
+            .item {
+                width: 10%;
+                height:fit-content;
+                border-radius: 1.5em;
+                padding: 1em;
+                margin: 1em;
+            }
+
+            .itemRed {
+                background-color: #ff336681;
+                border: .4em solid red;
+            }
+            
+            .itemBlue {
+                background-color: #3358ff81;
+                border: .4em solid blue;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <!-- Below are the elements we're displaying -->
+        
+        <div class="item itemRed" id="myRedElement">
+            <p>
+                DISTANCE FROM THIS ELEMENT
+            </p>
+        </div>
+        <div class="item itemBlue" id="myBlueElement">
+            <p>
+                Distance coordinates will be displayed here.
+            </p>
+        </div>
+
+        <script src="redElementListener.js"></script>
+
+    </body>
+</html>
