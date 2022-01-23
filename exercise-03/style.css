@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    background-image: url("mtn1.jpg");
+    background-color: #919838;
+}
+
+main {
+    padding: 1em 5em;
+    position: relative;
+    background-color: transparent;
+    color: rgb(104, 45, 5);
+    text-align: center;
+    font-size: 2em;
+    top: 150vh; /* Determines how quickly the rest of the text appears */
+}
+
+.bodyOne {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+    position: fixed;
+    background-image: url("mtn2.png");
+}
+
+.mountainBackground {
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    background-position-y: 26%;
+}
+
+#home {
+    font-weight: bold;
+    font-style: italic;
+    color: rgb(47, 255, 28);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 5em;
+    
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    
+    top: 100vh;
+}
