@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <style>
+
+            :root {
+                --transition-speed: 5s;
+            }
+
+            body {
+                margin: 0;
+                transition: background-color linear var(--transition-speed);
+            }
+
+            main {
+                margin: 0 10%;
+                padding: 2em;
+                background-color: white;
+                text-align: center;
+            }
+
+        </style>
+        <script src="colorCycling.js"></script>
+        
+    </head>
+    <body onload="nextColor()">
+
+        <main>
+            <h1>This is a sample page.</h1>
+            <h2>This page was designed to demonstrate setTimeout.</h2>
+            <br>
+            <button id="toggle01" onclick="toggleButtonClick()">Stop color cycling</button><br>
+        </main>
+
+    </body>
+</html>
