@@ -1,7 +1,7 @@
 // when clickButton == false color cycling will be on
 let clickedButton = false;
 
-
+// provides functionality to the button
 function toggleButtonClick() {
     
     const button = document.getElementById("toggle01");
@@ -18,6 +18,8 @@ function toggleButtonClick() {
 
 }
 
+// This is where the magic happens
+// creates random spectrum cycling through recursion
 function nextColor(time = 3000) {
     if (!clickedButton) {
 
