@@ -30,7 +30,6 @@ function displayCurrentUnixTime() {
                 return `<span style="color:rgb(${counterColors[index]}, 0, 0)">${number}</span>`
             })
             .join("");
-        // p.innerText = dateString;
         p.innerHTML = colorString;
 
         let newElement = document.createElement('p');
@@ -41,10 +40,8 @@ function displayCurrentUnixTime() {
         // then we start deleting elements so things don't get out of hand
         while (counterDiv.childElementCount > 20) counterDiv.removeChild(counterDiv.lastChild);
 
-        // dateString.length
         displayCurrentUnixTime();
     }, minTimeout)
-    // 20 was the smallest reliable setTimeout that I know of using this algorithm
 }
 
 displayCurrentUnixTime(); // to get it started
