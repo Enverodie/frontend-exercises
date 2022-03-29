@@ -3,44 +3,46 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext('2d');
 
 // set this at the start so we can have a constant and less confusion with widths later
-const ctxFont = "30px Trebuchet MS";
-ctx.font = ctxFont;
+const ctxFont = " Trebuchet MS"; // the space at the beginning is intentional.
+
 
 // this is a single object we write and instantiate at the same time
 const canvasObjects = {
-    drawables: [],
-    moveXSpeed: 10,
 
+    drawables: [],
+
+    // invokes the draw() method on all the drawables
     draw: function () {
         ctx.clearRect(0, 0, canvas.width, canvas.height); // clears the canvas
-        ctx.font = ctxFont;
         for (obj of this.drawables) { // draws everything
+            ctx.font = obj.font;
             obj.draw();
         }
     },
 
+    // provides the functionality that allows sidescrolling animations (if this method is repeatedly called)
     sideScroll: function () {
         const nextY = 50;
         for (obj of this.drawables) {
             let buffer = ctx.measureText(obj.text).width;
-            console.log(ctx.font);
-            if (obj.x + this.moveXSpeed > canvas.width + buffer / 2) {
+            if (obj.x + obj.movementSpeed > canvas.width + buffer / 2) { // the text has gone too far right
                 obj.x = -buffer;
 
-                if (obj.y > canvas.height) {
+                if (obj.y > canvas.height) { // the text has gone too far down the page
                     obj.y -= canvas.height;
                 }
-                else {
+                else { // the text has NOT gone too far down the page
                     obj.y += nextY;
                 }
             }
-            else {
-                obj.x += this.moveXSpeed;
+            else { // the text has NOT gone too far right
+                obj.x += obj.movementSpeed;
             }
-            this.draw();
+            this.draw(); // call the draw method on all the objects stored in this canvasObjects class instance
         }
     },
 
+    // makes everything start moving using setTimeout (which might not be an ideal solution, but, eh)
     startMove: function () {
         this.sideScroll();
         setTimeout(() => {
@@ -48,10 +50,12 @@ const canvasObjects = {
         }, 5);
     },
 
+    // allow this class to draw another eleement
     insert: function (element) {
         this.drawables.push(element);
     },
 
+    // takes form input and converts it into a new text class
     loadFromForm: function () {
         let form = document.getElementById('textInput');
         let newObject = new Text(form.value);

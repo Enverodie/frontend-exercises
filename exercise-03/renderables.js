@@ -8,12 +8,19 @@ class Text {
 
     constructor(string) {
         this.text = string;
-        this.x = -(ctx.measureText(string).width);
-        this.startY = Math.floor(Math.random() * 101);
+
+        let size = 200; // won't be available outside of constructor
+        if (string.length != 0) size = Math.ceil(size / string.length); // set size inversely related to string length
+        this.size = size;
+
+        this.font = this.size + "px" + ctxFont;
+        this.movementSpeed = 10;
+
+        this.x = -(ctx.measureText(string).width); // set the staring Y point to the end of the text's width
+        this.startY = Math.floor(Math.random() * 101); // set a random starting Y point between 0 and 100
         this.y = this.startY;
-        console.log(this.startY);
-        this.colorIndex = Math.floor(Math.random() * Text.colors.length);
-        this.opacity = 1;
+        this.colorIndex = Math.floor(Math.random() * Text.colors.length); // set a random color to be one of the colors in our Text.colors array
+        this.opacity = 1; // maybe I'll use this some other time >:D
     }
 
     draw() {
