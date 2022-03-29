@@ -1,37 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
+<html>
 
-        <style>
+<head>
+    <title>Canvas & Objects</title>
+    <style>
+        body {
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
 
-            :root {
-                --transition-speed: 5s;
-            }
+        body * {
+            flex: 1 1 0px;
+        }
 
-            body {
-                margin: 0;
-                transition: background-color linear var(--transition-speed);
-            }
+        main {
+            background-color: rgb(53, 31, 65);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            --color: #aa8110;
+        }
 
-            main {
-                margin: 0 10%;
-                padding: 2em;
-                background-color: white;
-                text-align: center;
-            }
+        main * {
+            flex: 0;
+        }
 
-        </style>
-        <script src="colorCycling.js"></script>
-        
-    </head>
-    <body onload="nextColor()">
+        h1 {
+            color: rgb(68, 227, 255);
+        }
+    </style>
+</head>
 
-        <main>
-            <h1>This is a sample page.</h1>
-            <h2>This page was designed to demonstrate setTimeout.</h2>
-            <br>
-            <button id="toggle01" onclick="toggleButtonClick()">Stop color cycling</button><br>
-        </main>
+<body>
+    <main>
+        <h1>Welcome</h1>
+        <form action="javascript:void(0)" onsubmit="canvasObjects.loadFromForm()">
+            <input type="text" id="textInput" autocomplete="off">
+            <input type="submit" value="Insert text">
+        </form>
+    </main>
+    <div id="canvasContainer">
+        <canvas id="canvas"></canvas>
+    </div>
+    <script src="renderables.js"></script>
+    <script src="canvas.js"></script>
+</body>
 
-    </body>
 </html>
