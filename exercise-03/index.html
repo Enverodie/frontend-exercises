@@ -1,51 +1,52 @@
 <html>
-    <head>
-        <title>Canvas & Objects</title>
-        <style>
 
-            body {
-                height: 100%;
-                display: flex;
-                flex-direction: row;
-                margin: 0;
-                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            }
+<head>
+    <title>Canvas & Objects</title>
+    <style>
+        body {
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
 
-            body * {
-                flex: 1 1 0px;
-            }
+        body * {
+            flex: 1 1 0px;
+        }
 
-            main {
-                background-color: rgb(53, 31, 65);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                --color: #aa8110;
-            }
+        main {
+            background-color: rgb(53, 31, 65);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            --color: #aa8110;
+        }
 
-            main * {
-                flex: 0;
-            }
+        main * {
+            flex: 0;
+        }
 
-            h1 {
-                color:rgb(68, 227, 255);
-            }
+        h1 {
+            color: rgb(68, 227, 255);
+        }
+    </style>
+</head>
 
-        </style>
-    </head>
-    <body>
-        <main>
-            <h1>Welcome</h1>
-            <form action="javascript:void(0)" onsubmit="funcName()">
-                <input type="text" id="textInput">
-                <input type="submit" value="Insert text">
-            </form>
-        </main>
-        <div id="canvasContainer">
-            <canvas id="canvas"></canvas>
-        </div>
-        <script src="renderables.js"></script>
-        <script src="canvas.js"></script>
-    </body>
+<body>
+    <main>
+        <h1>Welcome</h1>
+        <form action="javascript:void(0)" onsubmit="canvasObjects.loadFromForm()">
+            <input type="text" id="textInput">
+            <input type="submit" value="Insert text">
+        </form>
+    </main>
+    <div id="canvasContainer">
+        <canvas id="canvas"></canvas>
+    </div>
+    <script src="renderables.js"></script>
+    <script src="canvas.js"></script>
+</body>
+
 </html>

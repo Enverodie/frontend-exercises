@@ -5,17 +5,21 @@
 class Text {
 
     static colors = ['#1c850e', '#017888', '#aa8110'];
-    
-    constructor (string) {
+
+    constructor(string) {
         this.text = string;
-        this.x = 0;
-        this.y = 0;
-        this.colorIndex = 0;
+        this.x = -(ctx.measureText(string).width);
+        this.startY = Math.floor(Math.random() * 101);
+        this.y = this.startY;
+        console.log(this.startY);
+        this.colorIndex = Math.floor(Math.random() * Text.colors.length);
         this.opacity = 1;
     }
 
     draw() {
+        ctx.fillStyle = Text.colors[this.colorIndex];
         ctx.fillText(this.text, this.x, this.y);
+        ctx.fillStyle = '#000';
     }
 }
 
