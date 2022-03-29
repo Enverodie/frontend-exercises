@@ -1,4 +1,4 @@
-# Exercise 6 creates a side-scrolling page using previously discussed techniques.
+# Exercise 7 creates a side-scrolling page using previously discussed techniques.
 ## Uses:
     * Event listeners
     * The Window object
