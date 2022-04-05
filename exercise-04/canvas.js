@@ -38,8 +38,8 @@ const canvasObjects = {
             else { // the text has NOT gone too far right
                 obj.x += obj.movementSpeed;
             }
-            this.draw(); // call the draw method on all the objects stored in this canvasObjects class instance
         }
+        this.draw(); // call the draw method on all the objects stored in this canvasObjects class instance
     },
 
     // makes everything start moving using setTimeout (which might not be an ideal solution, but, eh)
