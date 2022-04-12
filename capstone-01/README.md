@@ -6,10 +6,10 @@ Thoughout the semester, you've been shown how to do various tricks in HTML, CSS,
 - Exercise 2 introduced javascript event listeners. **Here are some other document events you might find useful - Add an event listener to &lt;document&gt; for these -**
     - click
     - keypress, keydown, keyup
-- Exercise 3 introduced setTimeout. (There are other ways of creating animations, too. Can you figure out (`requestAnimationFrame()`?)[https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame])
+- Exercise 3 introduced setTimeout. (There are other ways of creating animations, too. Can you figure out [`requestAnimationFrame()`?](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame))
 - Exercise 4 introduced objects and drawing to an HTML canvas.
-    - (Here are some other methods you can call on `const ctx = canvas.getContext('2d')`)[https://www.w3schools.com/tags/ref_canvas.asp]
-    - (Here is some more documentation from Mozilla)[https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D]
+    - [Here are some other methods you can call on `const ctx = canvas.getContext('2d')`](https://www.w3schools.com/tags/ref_canvas.asp)
+    - [Here is some more documentation from Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D)
 
 
 ## If you need some inspiration, here are some ideas!
