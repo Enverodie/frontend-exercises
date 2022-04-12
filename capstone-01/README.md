@@ -3,9 +3,16 @@ Thoughout the semester, you've been shown how to do various tricks in HTML, CSS,
 
 ## If you've forgotten what we've done, never fear, everything is here.
 - Exercise 1 covered loading Javascript files into HTML and the importance of considering load order.
-- Exercise 2 introduced javascript event listeners. **Here are some other document events you might find useful - Add an event listener to &lt;document&gt; for these -**
-    - click
-    - keypress, keydown, keyup
+- Exercise 2 introduced javascript [event listeners.](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) **Here are some other events you might find useful - **
+    - Add an event listener to `document` for these -
+        - click, dblclick, mousedown, mouseup, mouseover, mouseout, mousemove
+        - keypress, keydown, keyup
+    - Add an event listener to `Window` for these -
+        - resize (useful for making things responsive)
+        - scroll (detects when a user scrolls down the page)
+    - [Other event listeners you can use (includes document, window, and other dom listeners)](https://data-flair.training/blogs/javascript-event-types/)
+
+
 - Exercise 3 introduced setTimeout. (There are other ways of creating animations, too. Can you figure out [`requestAnimationFrame()`?](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame))
 - Exercise 4 introduced objects and drawing to an HTML canvas.
     - [Here are some other methods you can call on `const ctx = canvas.getContext('2d')`](https://www.w3schools.com/tags/ref_canvas.asp)
