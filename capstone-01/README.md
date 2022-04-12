@@ -3,7 +3,7 @@ Thoughout the semester, you've been shown how to do various tricks in HTML, CSS,
 
 ## If you've forgotten what we've done, never fear, everything is here.
 - Exercise 1 covered loading Javascript files into HTML and the importance of considering load order.
-- Exercise 2 introduced javascript [event listeners.](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) **Here are some other events you might find useful - **
+- Exercise 2 introduced javascript [event listeners.](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) **Here are some other events you might find useful** -
     - Add an event listener to `document` for these -
         - click, dblclick, mousedown, mouseup, mouseover, mouseout, mousemove
         - keypress, keydown, keyup
